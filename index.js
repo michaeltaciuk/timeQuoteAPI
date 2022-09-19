@@ -1,20 +1,12 @@
-const express = require("express")
-const axios = require("axios")
-const bodyParser = require("body-parser")
-
-import quotes from "quotes.json"
-
-const PORT = process.env.PORT || 5000
+const express = require('express')
 const app = express()
+const port = process.env.PORT || 3000
 
-app.use(bodyParser.urlencoded({ extended: true }))
-app.use(bodyParser.json())
 
 app.get("/", (req, res) => {
-  const id = Math.floor(Math.random() * quotes.length)
-  res.send(quotes)
+  res.sendFile(__dirname + "/quotes.json");
 })
 
-app.listen(PORT, function () {
-  console.log(`Express server listening on port ${PORT}`)
+app.listen(port, () => {
+  console.log(`Express server listening on port ${port}`)
 })
