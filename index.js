@@ -31,6 +31,11 @@ let quotes = [{
     "id": "6",
     "text": "Give me six hours to chop down a tree and I will spend the first four sharpening the axe.",
     "name": "Abraham Lincoln"
+},
+{
+    "id": "7",
+    "text": "Imagine how you want to feel at the end of the day. Start working towards that now.",
+    "name": "Lin-Manuel Miranda"
 }]
 
 console.log(quotes.length)
