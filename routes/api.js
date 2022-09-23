@@ -5,11 +5,8 @@ const Quotes = require('../models/quotes');
 router.get('/quote', (req, res, next) => {
     // This will return all the data, exposing only the id and text field to the client
     Quotes.find({}, 'text')
-        .then((data) => res.json(data))
+        .then((data) => res.json(data[Math.floor(Math.random()*data.length)].text))
         .catch(next);
-
-    //let id = Math.floor(Math.random()*quotes.length)
-    //res.json(quotes[id].text);
 });
 
 module.exports = router;

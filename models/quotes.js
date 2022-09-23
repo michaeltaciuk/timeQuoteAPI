@@ -9,6 +9,6 @@ const QuotesSchema = new Schema({
 });
 
 // Create model for quotes
-const Quotes = mongoose.model('quote', QuoteSchema);
+const Quotes = mongoose.model('quote', QuotesSchema);
 
 module.exports = Quotes;
