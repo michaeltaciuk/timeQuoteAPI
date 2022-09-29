@@ -29,6 +29,10 @@ app.use((err, req, res, next) => {
     next();
 });
 
+app.get("/", (req, res) => {
+    res.send("Welcome to the time management quote api. Navigate to timeapi.ca/api/quote to get a random quote!")
+});
+
 app.listen(port, () => {
     console.log(`Express server listening on port ${port}`)
 })
